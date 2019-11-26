@@ -1,0 +1,24 @@
+on: [push]
+
+name: build
+
+jobs:
+  build_whitesource_with_java:
+    name: Build whitesource with java 
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@master
+      with:
+        submodules: true
+
+    - name: Build whitesource Docker Images with java
+      run: |
+        ./ci/bin/docker_build_and_push.sh 19/java whitesource whitesource:19 whitesource:19.10 whitesource:19.10.1
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
+        DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
+        GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
+  
