@@ -9,8 +9,11 @@ Current versions available:
 
 ```
 .
-├──19  
+├── 19
 │   ├── java
+│   │   └── Dockerfile
+│   └── node
+│       └── Dockerfile
 ```
 
 ## Usage
@@ -59,6 +62,9 @@ You can use this to pin down a version of the container from an existing develop
 
 ### whitesource
 - `whitesource`, `whitesource:19`, `whitesource:19.10`, `whitesource:19.10.1` [19/java/Dockerfile](19/java/Dockerfile)
+
+### whitesource with node
+- `whitesource:node`, `whitesource:19-node`, `whitesource:19.10-node`, `whitesource:19.10.1-node` [19/node/Dockerfile](19/node/Dockerfile)
 
 ## Why
 
