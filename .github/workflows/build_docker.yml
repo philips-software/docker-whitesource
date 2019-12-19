@@ -15,7 +15,7 @@ jobs:
 
     - name: Build whitesource Docker Images with java
       run: |
-        ./ci/bin/docker_build_and_push.sh 19/java whitesource whitesource:19 whitesource:19.10 whitesource:19.10.1
+        ./ci/bin/docker_build_and_push.sh 19/java whitesource whitesource:19 whitesource:19.11 whitesource:19.11.2
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -34,7 +34,7 @@ jobs:
 
     - name: Build whitesource Docker Images with node
       run: |
-        ./ci/bin/docker_build_and_push.sh 19/node whitesource:node whitesource:19-node whitesource:19.10-node whitesource:19.10.1-node
+        ./ci/bin/docker_build_and_push.sh 19/node whitesource:node whitesource:19-node whitesource:19.11-node whitesource:19.11.2-node
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'

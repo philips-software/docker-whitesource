@@ -6,5 +6,8 @@ The version numbers are related to the version of whitesource agent in the image
 
 ## [Unreleased]
 
+### Changed
+- Whitesource agent 19.11.2 
+
 ### Added
 - Whitesource agent 19.0.1 
