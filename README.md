@@ -28,8 +28,6 @@ In order to analyse a project use the following structure.
 
 _Replace all <your-xxxxx> variables with your own variables_
 
-``` bash
-
 ## Content
 
 The images obviously contain whitesource and java8, but also two other files:
@@ -56,7 +54,7 @@ $ docker run philipssoftware/whitesource:19 cat TAGS
 whitesource whitesource:19 whitesource:19.10 whitesource:19.10.1
 ```
 
-You can use this to pin down a version of the container from an existing development build for production. When using `blackduck:6` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
+You can use this to pin down a version of the container from an existing development build for production. When using `whitesource:19` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
 
 ## Simple Tags
 
