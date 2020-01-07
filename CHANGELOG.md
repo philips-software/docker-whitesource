@@ -7,6 +7,8 @@ The version numbers are related to the version of whitesource agent in the image
 ## [Unreleased]
 
 ### Changed
+- Adds version with docker 
+- Whitesource agent 19.12.2 
 - Whitesource agent 19.11.2 
 
 ### Added

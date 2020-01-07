@@ -10,6 +10,8 @@ Current versions available:
 ```
 .
 ├── 19
+│   ├── docker
+│   │   └── Dockerfile
 │   ├── java
 │   │   └── Dockerfile
 │   └── node
@@ -21,7 +23,7 @@ Current versions available:
 Images can be found on [https://hub.docker.com/r/philipssoftware/whitesource/](https://hub.docker.com/r/philipssoftware/whitesource/).
 
 ``` bash
-docker run -v $PWD:/code philipssoftware/whitesource:19 java -jar /app/wss-unified-agent-19.11.2.jar -d /code -c /code/whitesource.config
+docker run -v $PWD:/code philipssoftware/whitesource:19 java -jar /app/wss-unified-agent-19.12.2.jar -d /code -c /code/whitesource.config
 ```
 
 In order to analyse a project use the following structure.
@@ -59,10 +61,14 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### whitesource
-- `whitesource`, `whitesource:19`, `whitesource:19.11`, `whitesource:19.11.2` [19/java/Dockerfile](19/java/Dockerfile)
+- `whitesource`, `whitesource:19`, `whitesource:19.12`, `whitesource:19.12.2` [19/java/Dockerfile](19/java/Dockerfile)
 
 ### whitesource with node
-- `whitesource:node`, `whitesource:19-node`, `whitesource:19.11-node`, `whitesource:19.11.2-node` [19/node/Dockerfile](19/node/Dockerfile)
+- `whitesource:node`, `whitesource:19-node`, `whitesource:19.12-node`, `whitesource:19.12.2-node` [19/node/Dockerfile](19/node/Dockerfile)
+
+### whitesource with docker
+- `whitesource:docker`, `whitesource:19-docker`, `whitesource:19.12-docker`, `whitesource:19.12.2-docker` [19/docker/Dockerfile](19/docker/Dockerfile)
+
 
 ## Why
 

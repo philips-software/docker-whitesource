@@ -1,11 +1,8 @@
-FROM philipssoftware/openjdk:11
+FROM philipssoftware/openjdk:11-zulu-docker
 
 MAINTAINER Forest Keepers
 
 USER root
-
-RUN apt-get update && apt-get install -y \
-  unzip
 
 RUN mkdir -p /app
 RUN cd /app
