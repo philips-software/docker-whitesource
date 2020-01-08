@@ -59,3 +59,22 @@ jobs:
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
         DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
         GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
+
+  build_whitesource_with_dotnetcore:
+    name: Build whitesource with dotnetcore
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+
+    - name: Build whitesource Docker Images with dotnetcore
+      run: |
+        ./ci/bin/docker_build_and_push.sh 19/dotnetcore whitesource:dotnetcore whitesource:19-dotnetcore whitesource:19-dotnetcore-3 whitesource:19.12-dotnetcore whitesource:19.12-dotnetcore-3.0 whitesource:19.12.2-dotnetcore whitesource:19.12.2-dotnetcore-3.0.101
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
+        DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
+        GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
