@@ -6,10 +6,14 @@ The version numbers are related to the version of whitesource agent in the image
 
 ## [Unreleased]
 
+### Breaking
+- jar name changed into: wss-unified-agent.jar without version
+
 ### Changed
-- Adds version with docker 
 - Whitesource agent 19.12.2 
 - Whitesource agent 19.11.2 
 
 ### Added
-- Whitesource agent 19.0.1 
+- Whitesource agent 19.0.1
+- Adds version with docker 
+- Adds version with dotnetcore
