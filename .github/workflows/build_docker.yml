@@ -60,7 +60,7 @@ jobs:
         DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
         GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
 
-build_whitesource_with_dotnetcore:
+  build_whitesource_with_dotnetcore:
     name: Build whitesource with dotnetcore
     runs-on: ubuntu-latest
 
