@@ -12,7 +12,9 @@ Current versions available:
 ├── 19
 │   ├── docker
 │   │   └── Dockerfile
-│   ├── dotnetcore
+│   ├── dotnetcore-2.2.110
+│   │   └── Dockerfile
+│   ├── dotnetcore-3.0.101
 │   │   └── Dockerfile
 │   ├── java
 │   │   └── Dockerfile
@@ -68,8 +70,11 @@ You can use this to pin down a version of the container from an existing develop
 ### whitesource with node
 - `whitesource:node`, `whitesource:19-node`, `whitesource:19.12-node`, `whitesource:19.12.2-node` [19/node/Dockerfile](19/node/Dockerfile)
 
-### whitesource with dotnetcore
-- `whitesource:dotnetcore`, `whitesource:19-dotnetcore`, `whitesource:19-dotnetcore-3`, `whitesource:19.12-dotnetcore`, `whitesource:19.12-dotnetcore-3.0`, `whitesource:19.12.2-dotnetcore`, `whitesource:19.12.2-dotnetcore-3.0.101` [19/dotnetcore/Dockerfile](19/dotnetcore/Dockerfile)
+### whitesource with dotnetcore 3.0.101
+- `whitesource:dotnetcore`, `whitesource:19-dotnetcore`, `whitesource:19-dotnetcore-3`, `whitesource:19.12-dotnetcore`, `whitesource:19.12-dotnetcore-3.0`, `whitesource:19.12.2-dotnetcore`, `whitesource:19.12.2-dotnetcore-3.0.101` [19/dotnetcore-3.0.101/Dockerfile](19/dotnetcore-3.0.101/Dockerfile)
+
+### whitesource with dotnetcore 2.2.110
+- `whitesource:19-dotnetcore-2`, `whitesource:19.12-dotnetcore-2.2`, `whitesource:19.12.2-dotnetcore-2.2.110` [19/dotnetcore-2.2.110/Dockerfile](19/dotnetcore-2.2.110/Dockerfile)
 
 ### whitesource with docker
 - `whitesource:docker`, `whitesource:19-docker`, `whitesource:19.12-docker`, `whitesource:19.12.2-docker` [19/docker/Dockerfile](19/docker/Dockerfile)

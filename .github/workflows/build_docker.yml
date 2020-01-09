@@ -60,8 +60,8 @@ jobs:
         DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
         GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
 
-  build_whitesource_with_dotnetcore:
-    name: Build whitesource with dotnetcore
+  build_whitesource_with_dotnetcore_2:
+    name: Build whitesource with dotnetcore 2
     runs-on: ubuntu-latest
 
     steps:
@@ -70,9 +70,28 @@ jobs:
       with:
         submodules: true
 
-    - name: Build whitesource Docker Images with dotnetcore
+    - name: Build whitesource Docker Images with dotnetcore 2
       run: |
-        ./ci/bin/docker_build_and_push.sh 19/dotnetcore whitesource:dotnetcore whitesource:19-dotnetcore whitesource:19-dotnetcore-3 whitesource:19.12-dotnetcore whitesource:19.12-dotnetcore-3.0 whitesource:19.12.2-dotnetcore whitesource:19.12.2-dotnetcore-3.0.101
+        ./ci/bin/docker_build_and_push.sh 19/dotnetcore-2.2.110 whitesource:19-dotnetcore-2 whitesource:19.12-dotnetcore-2.2 whitesource:19.12.2-dotnetcore-2.2.110
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
+        DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
+        GITHUB_ORGANIZATION: ${{ secrets.GITHUB_ORGANIZATION }}
+
+  build_whitesource_with_dotnetcore_3:
+    name: Build whitesource with dotnetcore 3
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+
+    - name: Build whitesource Docker Images with dotnetcore 3
+      run: |
+        ./ci/bin/docker_build_and_push.sh 19/dotnetcore-3.0.101 whitesource:dotnetcore whitesource:19-dotnetcore whitesource:19-dotnetcore-3 whitesource:19.12-dotnetcore whitesource:19.12-dotnetcore-3.0 whitesource:19.12.2-dotnetcore whitesource:19.12.2-dotnetcore-3.0.101
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'

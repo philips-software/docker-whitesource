@@ -16,4 +16,5 @@ The version numbers are related to the version of whitesource agent in the image
 ### Added
 - Whitesource agent 19.0.1
 - Adds version with docker 
-- Adds version with dotnetcore
+- Adds version with dotnetcore 3.0.101
+- Adds version with dotnetcore 2.2.110
