@@ -2,7 +2,7 @@ FROM philipssoftware/openjdk:11
 
 MAINTAINER Forest Keepers
 
-ARG wss_latest_release_version=19.12.2
+ARG wss_latest_release_version=20.2.1
 ENV WSS_LATEST_RELEASE_VERSION $wss_latest_release_version
 
 USER root

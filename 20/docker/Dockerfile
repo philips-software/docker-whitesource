@@ -1,15 +1,11 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0.101
+FROM philipssoftware/openjdk:11-zulu-docker
 
 MAINTAINER Forest Keepers
 
-ARG wss_latest_release_version=19.12.2
+ARG wss_latest_release_version=20.2.1
 ENV WSS_LATEST_RELEASE_VERSION $wss_latest_release_version
 
-RUN apt-get update \ 
-    && apt-get -y install default-jre \
-    && apt-get -q autoremove \
-    && apt-get -q clean -y \
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/*.bin
+USER root
 
 RUN mkdir -p /app
 RUN cd /app
@@ -17,8 +13,6 @@ RUN cd /app
 WORKDIR /app
 
 RUN curl -o /app/wss-unified-agent.jar https://unified-agent.s3.amazonaws.com/wss-unified-agent-$WSS_LATEST_RELEASE_VERSION.jar 
-
-RUN ls
 
 RUN java -jar wss-unified-agent.jar -v
 
