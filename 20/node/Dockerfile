@@ -1,11 +1,14 @@
-FROM philipssoftware/openjdk:11-zulu-docker
+FROM philipssoftware/node:10-java
 
 MAINTAINER Forest Keepers
 
-ARG wss_latest_release_version=19.12.2
+ARG wss_latest_release_version=20.2.1
 ENV WSS_LATEST_RELEASE_VERSION $wss_latest_release_version
 
 USER root
+
+RUN apt-get update && apt-get install -y \
+  unzip
 
 RUN mkdir -p /app
 RUN cd /app

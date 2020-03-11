@@ -15,7 +15,7 @@ jobs:
 
     - name: Build whitesource Docker Images with java
       run: |
-        ./ci/bin/docker_build_and_push.sh 19/java whitesource whitesource:19 whitesource:19.12 whitesource:19.12.2
+        ./ci/bin/docker_build_and_push.sh 20/java whitesource whitesource:20 whitesource:20.2 whitesource:20.2.1
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -34,7 +34,7 @@ jobs:
 
     - name: Build whitesource Docker Images with node
       run: |
-        ./ci/bin/docker_build_and_push.sh 19/node whitesource:node whitesource:19-node whitesource:19.12-node whitesource:19.12.2-node
+        ./ci/bin/docker_build_and_push.sh 20/node whitesource:node whitesource:20-node whitesource:20.2-node whitesource:20.2.1-node
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -53,7 +53,7 @@ jobs:
 
     - name: Build whitesource Docker Images with docker
       run: |
-        ./ci/bin/docker_build_and_push.sh 19/docker whitesource:docker whitesource:19-docker whitesource:19.12-docker whitesource:19.12.2-docker
+        ./ci/bin/docker_build_and_push.sh 20/docker whitesource:docker whitesource:20-docker whitesource:20.2-docker whitesource:20.2.1-docker
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -72,7 +72,7 @@ jobs:
 
     - name: Build whitesource Docker Images with dotnetcore
       run: |
-        ./ci/bin/docker_build_and_push.sh 19/dotnetcore whitesource:dotnetcore whitesource:19-dotnetcore whitesource:19-dotnetcore-3 whitesource:19.12-dotnetcore whitesource:19.12-dotnetcore-3.0 whitesource:19.12.2-dotnetcore whitesource:19.12.2-dotnetcore-3.0.101
+        ./ci/bin/docker_build_and_push.sh 20/dotnetcore whitesource:dotnetcore whitesource:20-dotnetcore whitesource:20-dotnetcore-3 whitesource:20.2-dotnetcore whitesource:20.2-dotnetcore-3.0 whitesource:20.2.1-dotnetcore whitesource:20.2.1-dotnetcore-3.0.101
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
