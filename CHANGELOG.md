@@ -10,6 +10,7 @@ The version numbers are related to the version of whitesource agent in the image
 - jar name changed into: wss-unified-agent.jar without version
 
 ### Changed
+- Use docker-ci-scripts github action instead of submodule
 - Whitesource agent 20.2.1 
 - Whitesource agent 19.12.2 
 - Whitesource agent 19.11.2 
