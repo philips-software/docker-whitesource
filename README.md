@@ -55,7 +55,7 @@ This contains all the similar tags at the point of creation.
 
 ```
 $ docker run philipssoftware/whitesource:20 cat TAGS
-whitesource whitesource:20 whitesource:20.2 whitesource:20.2.1
+whitesource whitesource:20 whitesource:20.2 whitesource:20.2.2
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `whitesource:20` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
@@ -63,16 +63,16 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### whitesource
-- `whitesource`, `whitesource:20`, `whitesource:20.2`, `whitesource:20.2.1` [20/java/Dockerfile](20/java/Dockerfile)
+- `whitesource`, `whitesource:20`, `whitesource:20.2`, `whitesource:20.2.2` [20/java/Dockerfile](20/java/Dockerfile)
 
 ### whitesource with node
-- `whitesource:node`, `whitesource:20-node`, `whitesource:20.2-node`, `whitesource:20.2.1-node` [20/node/Dockerfile](20/node/Dockerfile)
+- `whitesource:node`, `whitesource:20-node`, `whitesource:20.2-node`, `whitesource:20.2.2-node` [20/node/Dockerfile](20/node/Dockerfile)
 
 ### whitesource with dotnetcore
-- `whitesource:dotnetcore`, `whitesource:20-dotnetcore`, `whitesource:20-dotnetcore-3`, `whitesource:20.2-dotnetcore`, `whitesource:20.2-dotnetcore-3.0`, `whitesource:20.2.1-dotnetcore`, `whitesource:20.2.1-dotnetcore-3.0.101` [20/dotnetcore/Dockerfile](20/dotnetcore/Dockerfile)
+- `whitesource:dotnetcore`, `whitesource:20-dotnetcore`, `whitesource:20-dotnetcore-3`, `whitesource:20.2-dotnetcore`, `whitesource:20.2-dotnetcore-3.0`, `whitesource:20.2.2-dotnetcore`, `whitesource:20.2.2-dotnetcore-3.0.101` [20/dotnetcore/Dockerfile](20/dotnetcore/Dockerfile)
 
 ### whitesource with docker
-- `whitesource:docker`, `whitesource:20-docker`, `whitesource:20.2-docker`, `whitesource:20.2.1-docker` [20/docker/Dockerfile](20/docker/Dockerfile)
+- `whitesource:docker`, `whitesource:20-docker`, `whitesource:20.2-docker`, `whitesource:20.2.2-docker` [20/docker/Dockerfile](20/docker/Dockerfile)
 
 
 ## Why
