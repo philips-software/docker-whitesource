@@ -11,10 +11,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build whitesource Docker Images with java
-      uses: philips-software/docker-ci-scripts@v1.0.1
+      uses: philips-software/docker-ci-scripts@v2.1.0
       with:
         dockerfile: 20/java 
-        tags: whitesource whitesource:20 whitesource:20.2 whitesource:20.2.2
+        image-name: whitesource
+        tags: latest 20 20.3 20.3.2
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -29,10 +30,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build whitesource Docker Images with node
-      uses: philips-software/docker-ci-scripts@v1.0.1
+      uses: philips-software/docker-ci-scripts@v2.1.0
       with:
         dockerfile: 20/node 
-        tags: whitesource:node whitesource:20-node whitesource:20.2-node whitesource:20.2.2-node
+        image-name: whitesource
+        tags: node 20-node 20.3-node 20.3.2-node
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -47,10 +49,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build whitesource Docker Images with docker
-      uses: philips-software/docker-ci-scripts@v1.0.1
+      uses: philips-software/docker-ci-scripts@v2.1.0
       with:
         dockerfile: 20/docker 
-        tags: whitesource:docker whitesource:20-docker whitesource:20.2-docker whitesource:20.2.2-docker
+        image-name: whitesource
+        tags: docker 20-docker 20.3-docker 20.3.2-docker
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -65,10 +68,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build whitesource Docker Images with dotnetcore
-      uses: philips-software/docker-ci-scripts@v1.0.1
+      uses: philips-software/docker-ci-scripts@v2.1.0
       with:
         dockerfile: 20/dotnetcore 
-        tags: whitesource:dotnetcore whitesource:20-dotnetcore whitesource:20-dotnetcore-3 whitesource:20.2-dotnetcore whitesource:20.2-dotnetcore-3.0 whitesource:20.2.2-dotnetcore whitesource:20.2.2-dotnetcore-3.0.101
+        image-name: whitesource
+        tags: dotnetcore 20-dotnetcore 20-dotnetcore-3 20.3-dotnetcore 20.3-dotnetcore-3.0 20.3.2-dotnetcore 20.3.2-dotnetcore-3.0.101
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
