@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.0.101
 
 MAINTAINER Forest Keepers
 
-ARG wss_latest_release_version=20.3.2
+ARG wss_latest_release_version=20.4.1.1
 ENV WSS_LATEST_RELEASE_VERSION $wss_latest_release_version
 
 RUN apt-get update \ 
