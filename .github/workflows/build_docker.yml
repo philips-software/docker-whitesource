@@ -34,7 +34,8 @@ jobs:
       with:
         dockerfile: 20/node 
         image-name: whitesource
-        tags: node 20-node 20.4-node 20.4.1-node 20.4.1.1-node
+        push-branch: update-node-version
+        tags: node-14
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'

@@ -1,4 +1,4 @@
-FROM philipssoftware/node:10-java
+FROM philipssoftware/node:java
 
 MAINTAINER Forest Keepers
 
