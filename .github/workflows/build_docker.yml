@@ -30,7 +30,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build whitesource Docker Images with node
-      uses: philips-software/docker-ci-scripts@v2.2.0
+      uses: philips-software/docker-ci-scripts@update-readme-on-docker-io
       with:
         dockerfile: 20/node 
         image-name: whitesource
