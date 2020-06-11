@@ -10,6 +10,7 @@ The version numbers are related to the version of whitesource agent in the image
 - jar name changed into: wss-unified-agent.jar without version
 
 ### Changed
+- Whitesource agent 20.5.2
 - Whitesource agent 20.4.1.1
 - Whitesource agent 20.3.2
 - #6 - Whitesource agent 20.2.2 
