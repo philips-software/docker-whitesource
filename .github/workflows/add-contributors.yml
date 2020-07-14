@@ -7,7 +7,7 @@ on:
 
 jobs:
   updateContributors:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     container: node:12-alpine3.11
     steps:
       - run: apk add bash git python3 py3-pip
