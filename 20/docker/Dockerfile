@@ -2,7 +2,7 @@ FROM philipssoftware/openjdk:11-zulu-docker
 
 MAINTAINER Forest Keepers
 
-ARG wss_latest_release_version=20.5.2
+ARG wss_latest_release_version=20.6.2
 ENV WSS_LATEST_RELEASE_VERSION $wss_latest_release_version
 
 USER root

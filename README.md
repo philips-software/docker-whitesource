@@ -63,16 +63,16 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### whitesource
-- `whitesource`, `whitesource:20`, `whitesource:20.5`, `whitesource:20.5.2` [20/java/Dockerfile](20/java/Dockerfile)
+- `whitesource`, `whitesource:20`, `whitesource:20.6`, `whitesource:20.6.2` [20/java/Dockerfile](20/java/Dockerfile)
 
 ### whitesource with node
-- `whitesource:node`, `whitesource:20-node`, `whitesource:20.5-node`, `whitesource:20.5.2-node` [20/node/Dockerfile](20/node/Dockerfile)
+- `whitesource:node`, `whitesource:20-node`, `whitesource:20.6-node`, `whitesource:20.6.2-node` [20/node/Dockerfile](20/node/Dockerfile)
 
 ### whitesource with dotnetcore
-- `whitesource:dotnetcore`, `whitesource:20-dotnetcore`, `whitesource:20-dotnetcore-3`, `whitesource:20.5-dotnetcore`, `whitesource:20.5-dotnetcore-3.0`, `whitesource:20.5.2-dotnetcore`, `whitesource:20.5.2-dotnetcore-3.0.101` [20/dotnetcore/Dockerfile](20/dotnetcore/Dockerfile)
+- `whitesource:dotnetcore`, `whitesource:20-dotnetcore`, `whitesource:20-dotnetcore-3`, `whitesource:20.6-dotnetcore`, `whitesource:20.6-dotnetcore-3.0`, `whitesource:20.6.2-dotnetcore`, `whitesource:20.6.2-dotnetcore-3.0.101` [20/dotnetcore/Dockerfile](20/dotnetcore/Dockerfile)
 
 ### whitesource with docker
-- `whitesource:docker`, `whitesource:20-docker`, `whitesource:20.5-docker`, `whitesource:20.5.2-docker` [20/docker/Dockerfile](20/docker/Dockerfile)
+- `whitesource:docker`, `whitesource:20-docker`, `whitesource:20.6-docker`, `whitesource:20.6.2-docker` [20/docker/Dockerfile](20/docker/Dockerfile)
 
 
 ## Why
