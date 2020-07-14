@@ -101,6 +101,10 @@ Currently this image only has java. Running a project with `yarn` or `npm` will 
 
 License is MIT. See [LICENSE file](LICENSE.md)
 
+## Contributors
+
+[//]: contributor-faces
+
 ## Philips Forest
 
 This module is part of the Philips Forest.
