@@ -105,8 +105,8 @@ License is MIT. See [LICENSE file](LICENSE.md)
 
 [//]: contributor-faces
 <a href="https://github.com/JeroenKnoops"><img src="https://avatars1.githubusercontent.com/u/10019?v=4" title="JeroenKnoops" width="80" height="80"></a>
-<a href="https://github.com/npalm"><img src="https://avatars2.githubusercontent.com/u/11609620?v=4" title="npalm" width="80" height="80"></a>
 <a href="https://github.com/bartgolsteijn"><img src="https://avatars0.githubusercontent.com/u/3263880?v=4" title="bartgolsteijn" width="80" height="80"></a>
+<a href="https://github.com/npalm"><img src="https://avatars2.githubusercontent.com/u/11609620?v=4" title="npalm" width="80" height="80"></a>
 <a href="https://github.com/timovandeput"><img src="https://avatars3.githubusercontent.com/u/5458560?v=4" title="timovandeput" width="80" height="80"></a>
 
 [//]: contributor-faces
