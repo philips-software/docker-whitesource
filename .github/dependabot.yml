@@ -14,8 +14,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    default_assignees:
-      - 'jeroenknoops'
     allowed_updates:
       - match:
           update_type: "security"
