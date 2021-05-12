@@ -13,9 +13,9 @@ jobs:
     - name: Build whitesource Docker Images with java
       uses: philips-software/docker-ci-scripts@v3.1.0
       with:
-        dockerfile: 20/java 
+        dockerfile: 21/java 
         image-name: whitesource
-        tags: latest 20 20.6 20.6.2
+        tags: latest 21 21.4 21.4.2
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -32,9 +32,9 @@ jobs:
     - name: Build whitesource Docker Images with node
       uses: philips-software/docker-ci-scripts@v3.1.0
       with:
-        dockerfile: 20/node 
+        dockerfile: 21/node 
         image-name: whitesource
-        tags: node 20-node 20.6-node 20.6.2-node
+        tags: node 21-node 21.4-node 21.4.2-node
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -51,9 +51,9 @@ jobs:
     - name: Build whitesource Docker Images with docker
       uses: philips-software/docker-ci-scripts@v3.1.0
       with:
-        dockerfile: 20/docker 
+        dockerfile: 21/docker 
         image-name: whitesource
-        tags: docker 20-docker 20.6-docker 20.6.2-docker
+        tags: docker 21-docker 21.4-docker 21.4.2-docker
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -70,9 +70,9 @@ jobs:
     - name: Build whitesource Docker Images with dotnetcore
       uses: philips-software/docker-ci-scripts@v3.1.0
       with:
-        dockerfile: 20/dotnetcore 
+        dockerfile: 21/dotnetcore 
         image-name: whitesource
-        tags: dotnetcore 20-dotnetcore 20-dotnetcore-3 20.6-dotnetcore 20.6-dotnetcore-3.0 20.6.2-dotnetcore 20.6.2-dotnetcore-3.0.101
+        tags: dotnetcore 21-dotnetcore 21-dotnetcore-3 21.4-dotnetcore 21.4-dotnetcore-3.0 21.4.2-dotnetcore 21.4.2-dotnetcore-3.0.101
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
