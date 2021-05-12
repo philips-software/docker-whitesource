@@ -9,7 +9,7 @@ Current versions available:
 
 ```
 .
-├── 20
+├── 21
 │   ├── docker
 │   │   └── Dockerfile
 │   ├── dotnetcore
@@ -25,7 +25,7 @@ Current versions available:
 Images can be found on [https://hub.docker.com/r/philipssoftware/whitesource/](https://hub.docker.com/r/philipssoftware/whitesource/).
 
 ``` bash
-docker run -v $PWD:/code philipssoftware/whitesource:20 java -jar /app/wss-unified-agent.jar -d /code -c /code/whitesource.config
+docker run -v $PWD:/code philipssoftware/whitesource:21 java -jar /app/wss-unified-agent.jar -d /code -c /code/whitesource.config
 ```
 
 In order to analyse a project use the following structure.
@@ -45,7 +45,7 @@ This file has a url to the REPO with specific commit-sha of the build.
 Example: 
 
 ```
-$ docker run philipssoftware/whitesource:20 cat REPO
+$ docker run philipssoftware/whitesource:21 cat REPO
 https://github.com/philips-software/docker-whitesource/tree/facb2271e5a563e5d6f65ca3f475cefac37b8b6c
 ```
 
@@ -54,25 +54,25 @@ https://github.com/philips-software/docker-whitesource/tree/facb2271e5a563e5d6f6
 This contains all the similar tags at the point of creation. 
 
 ```
-$ docker run philipssoftware/whitesource:20 cat TAGS
-whitesource whitesource:20 whitesource:20.5 whitesource:20.5.2
+$ docker run philipssoftware/whitesource:21 cat TAGS
+whitesource whitesource:21 whitesource:21.4 whitesource:21.4.2
 ```
 
-You can use this to pin down a version of the container from an existing development build for production. When using `whitesource:20` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
+You can use this to pin down a version of the container from an existing development build for production. When using `whitesource:21` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
 
 ## Simple Tags
 
 ### whitesource
-- `whitesource`, `whitesource:20`, `whitesource:20.6`, `whitesource:20.6.2` [20/java/Dockerfile](20/java/Dockerfile)
+- `whitesource`, `whitesource:21`, `whitesource:21.4`, `whitesource:21.4.2` [21/java/Dockerfile](21/java/Dockerfile)
 
 ### whitesource with node
-- `whitesource:node`, `whitesource:20-node`, `whitesource:20.6-node`, `whitesource:20.6.2-node` [20/node/Dockerfile](20/node/Dockerfile)
+- `whitesource:node`, `whitesource:21-node`, `whitesource:21.4-node`, `whitesource:21.4.2-node` [21/node/Dockerfile](21/node/Dockerfile)
 
 ### whitesource with dotnetcore
-- `whitesource:dotnetcore`, `whitesource:20-dotnetcore`, `whitesource:20-dotnetcore-3`, `whitesource:20.6-dotnetcore`, `whitesource:20.6-dotnetcore-3.0`, `whitesource:20.6.2-dotnetcore`, `whitesource:20.6.2-dotnetcore-3.0.101` [20/dotnetcore/Dockerfile](20/dotnetcore/Dockerfile)
+- `whitesource:dotnetcore`, `whitesource:21-dotnetcore`, `whitesource:21-dotnetcore-3`, `whitesource:21.4-dotnetcore`, `whitesource:21.4-dotnetcore-3.0`, `whitesource:21.4.2-dotnetcore`, `whitesource:21.4.2-dotnetcore-3.0.101` [21/dotnetcore/Dockerfile](21/dotnetcore/Dockerfile)
 
 ### whitesource with docker
-- `whitesource:docker`, `whitesource:20-docker`, `whitesource:20.6-docker`, `whitesource:20.6.2-docker` [20/docker/Dockerfile](20/docker/Dockerfile)
+- `whitesource:docker`, `whitesource:21-docker`, `whitesource:21.4-docker`, `whitesource:21.4.2-docker` [21/docker/Dockerfile](21/docker/Dockerfile)
 
 
 ## Why
