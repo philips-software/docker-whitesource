@@ -55,7 +55,7 @@ This contains all the similar tags at the point of creation.
 
 ```
 $ docker run philipssoftware/whitesource:21 cat TAGS
-whitesource whitesource:21 whitesource:21.4 whitesource:21.4.2
+whitesource whitesource:21 whitesource:21.6 whitesource:21.6.3
 ```
 
 You can use this to pin down a version of the container from an existing development build for production. When using `whitesource:21` for development. This ensures that you've got all security updates in your build. If you want to pin the version of your image down for production, you can use this file inside of the container to look for the most specific tag, the last one.
@@ -63,16 +63,16 @@ You can use this to pin down a version of the container from an existing develop
 ## Simple Tags
 
 ### whitesource
-- `whitesource`, `whitesource:21`, `whitesource:21.4`, `whitesource:21.4.2` [21/java/Dockerfile](21/java/Dockerfile)
+- `whitesource`, `whitesource:21`, `whitesource:21.6`, `whitesource:21.6.3` [21/java/Dockerfile](21/java/Dockerfile)
 
 ### whitesource with node
-- `whitesource:node`, `whitesource:21-node`, `whitesource:21.4-node`, `whitesource:21.4.2-node` [21/node/Dockerfile](21/node/Dockerfile)
+- `whitesource:node`, `whitesource:21-node`, `whitesource:21.6-node`, `whitesource:21.6.3-node` [21/node/Dockerfile](21/node/Dockerfile)
 
 ### whitesource with dotnetcore
-- `whitesource:dotnetcore`, `whitesource:21-dotnetcore`, `whitesource:21-dotnetcore-3`, `whitesource:21.4-dotnetcore`, `whitesource:21.4-dotnetcore-3.0`, `whitesource:21.4.2-dotnetcore`, `whitesource:21.4.2-dotnetcore-3.0.101` [21/dotnetcore/Dockerfile](21/dotnetcore/Dockerfile)
+- `whitesource:dotnetcore`, `whitesource:21-dotnetcore`, `whitesource:21-dotnetcore-3`, `whitesource:21.6-dotnetcore`, `whitesource:21.6-dotnetcore-3.0`, `whitesource:21.6.3-dotnetcore`, `whitesource:21.6.3-dotnetcore-3.0.101` [21/dotnetcore/Dockerfile](21/dotnetcore/Dockerfile)
 
 ### whitesource with docker
-- `whitesource:docker`, `whitesource:21-docker`, `whitesource:21.4-docker`, `whitesource:21.4.2-docker` [21/docker/Dockerfile](21/docker/Dockerfile)
+- `whitesource:docker`, `whitesource:21-docker`, `whitesource:21.6-docker`, `whitesource:21.6.3-docker` [21/docker/Dockerfile](21/docker/Dockerfile)
 
 
 ## Why
