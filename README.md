@@ -108,8 +108,8 @@ License is MIT. See [LICENSE file](LICENSE.md)
 <a href="https://github.com/bartgolsteijn"><img src="https://avatars.githubusercontent.com/u/3263880?v=4" title="bartgolsteijn" width="80" height="80"></a>
 <a href="https://github.com/timovandeput"><img src="https://avatars.githubusercontent.com/u/5458560?v=4" title="timovandeput" width="80" height="80"></a>
 <a href="https://github.com/npalm"><img src="https://avatars.githubusercontent.com/u/11609620?v=4" title="npalm" width="80" height="80"></a>
-<a href="https://github.com/marcofranssen"><img src="https://avatars.githubusercontent.com/u/694733?v=4" title="marcofranssen" width="80" height="80"></a>
 <a href="https://github.com/Brend-Smits"><img src="https://avatars.githubusercontent.com/u/15904543?v=4" title="Brend-Smits" width="80" height="80"></a>
+<a href="https://github.com/marcofranssen"><img src="https://avatars.githubusercontent.com/u/694733?v=4" title="marcofranssen" width="80" height="80"></a>
 
 [//]: contributor-faces
 
