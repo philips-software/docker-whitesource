@@ -2,7 +2,7 @@ FROM philipssoftware/node:lts-java
 
 MAINTAINER Forest Keepers
 
-ARG wss_latest_release_version=21.4.2
+ARG wss_latest_release_version=21.6.3
 ENV WSS_LATEST_RELEASE_VERSION $wss_latest_release_version
 
 USER root
