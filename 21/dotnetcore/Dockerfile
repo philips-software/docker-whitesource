@@ -11,18 +11,13 @@ RUN apt-get update \
     && apt-get -q clean -y \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*.bin
 
-RUN mkdir -p /app
-RUN cd /app
-
 WORKDIR /app
 
-RUN curl -o /app/wss-unified-agent.jar https://unified-agent.s3.amazonaws.com/wss-unified-agent-$WSS_LATEST_RELEASE_VERSION.jar 
-
-RUN ls
+RUN curl -o wss-unified-agent.jar https://unified-agent.s3.amazonaws.com/wss-unified-agent-$WSS_LATEST_RELEASE_VERSION.jar
 
 RUN java -jar wss-unified-agent.jar -v
 
-ADD REPO .
-ADD TAGS .
+COPY REPO .
+COPY TAGS .
 
 CMD java -jar wss-unified-agent.jar

@@ -10,12 +10,9 @@ USER root
 RUN apt-get update && apt-get install -y \
   unzip
 
-RUN mkdir -p /app
-RUN cd /app
-
 WORKDIR /app
 
-RUN curl -o /app/wss-unified-agent.jar https://unified-agent.s3.amazonaws.com/wss-unified-agent-$WSS_LATEST_RELEASE_VERSION.jar 
+RUN curl -o wss-unified-agent.jar https://unified-agent.s3.amazonaws.com/wss-unified-agent-$WSS_LATEST_RELEASE_VERSION.jar
 
 RUN java -jar wss-unified-agent.jar -v
 
