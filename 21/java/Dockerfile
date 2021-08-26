@@ -16,7 +16,7 @@ RUN curl -o wss-unified-agent.jar https://unified-agent.s3.amazonaws.com/wss-uni
 
 RUN java -jar wss-unified-agent.jar -v
 
-ADD REPO .
-ADD TAGS .
+COPY REPO .
+COPY TAGS .
 
 CMD java -jar wss-unified-agent.jar
