@@ -10,6 +10,7 @@ The version numbers are related to the version of whitesource agent in the image
 - jar name changed into: wss-unified-agent.jar without version
 
 ### Changed
+- Whitesource agent 21.9.1
 - Whitesource agent 21.6.3
 - Whitesource agent 21.4.2
 - Update docker workflow to version 2.2.1
