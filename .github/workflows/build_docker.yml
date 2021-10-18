@@ -15,7 +15,7 @@ jobs:
       with:
         dockerfile: 21/java 
         image-name: whitesource
-        tags: latest 21 21.6 21.6.3
+        tags: latest 21 21.9 21.9.1
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -34,7 +34,7 @@ jobs:
       with:
         dockerfile: 21/node 
         image-name: whitesource
-        tags: node 21-node 21.6-node 21.6.3-node
+        tags: node 21-node 21.9-node 21.9.1-node
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -53,7 +53,7 @@ jobs:
       with:
         dockerfile: 21/docker 
         image-name: whitesource
-        tags: docker 21-docker 21.6-docker 21.6.3-docker
+        tags: docker 21-docker 21.9-docker 21.9.1-docker
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
@@ -72,7 +72,7 @@ jobs:
       with:
         dockerfile: 21/dotnetcore 
         image-name: whitesource
-        tags: dotnetcore 21-dotnetcore 21-dotnetcore-3 21.6-dotnetcore 21.6-dotnetcore-3.0 21.6.3-dotnetcore 21.6.3-dotnetcore-3.0.101
+        tags: dotnetcore 21-dotnetcore 21-dotnetcore-3 21.9-dotnetcore 21.9-dotnetcore-3.0 21.9.1-dotnetcore 21.9.1-dotnetcore-3.0.101
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
