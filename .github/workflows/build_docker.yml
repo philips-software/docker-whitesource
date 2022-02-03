@@ -2,79 +2,41 @@ on: [push]
 
 name: build
 
+env:
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
+  DOCKER_ORGANIZATION: philipssoftware
+  GITHUB_ORGANIZATION: philips-software
+  COSIGN_PRIVATE_KEY: '${{ secrets.COSIGN_PRIVATE_KEY }}'
+  COSIGN_PASSWORD: '${{ secrets.COSIGN_PASSWORD }}'
+  COSIGN_PUBLIC_KEY: '${{ secrets.COSIGN_PUBLIC_KEY }}'
+
 jobs:
-  build_whitesource_with_java:
-    name: Build whitesource with java 
+  build_container:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        include:
+          - name: Build whitesource Docker Images with java
+            dockerfile: 21/java 
+            tags: latest 21 21.9 21.9.1
+          - name: Build whitesource Docker Images with node
+            dockerfile: 21/node 
+            tags: node 21-node 21.9-node 21.9.1-node
+          - name: Build whitesource Docker Images with docker
+            dockerfile: 21/docker 
+            tags: docker 21-docker 21.9-docker 21.9.1-docker
+          - name: Build whitesource Docker Images with dotnetcore
+            dockerfile: 21/dotnetcore 
+            tags: dotnetcore 21-dotnetcore 21-dotnetcore-3 21.9-dotnetcore 21.9-dotnetcore-3.0 21.9.1-dotnetcore 21.9.1-dotnetcore-3.0.101
     steps:
-    - uses: actions/checkout@v2.4.0
-
-    - name: Build whitesource Docker Images with java
-      uses: philips-software/docker-ci-scripts@v4.1.0
-      with:
-        dockerfile: 21/java 
-        image-name: whitesource
-        tags: latest 21 21.9 21.9.1
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
-
-  build_whitesource_with_node:
-    name: Build whitesource with node 
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2.4.0
-
-    - name: Build whitesource Docker Images with node
-      uses: philips-software/docker-ci-scripts@v4.1.0
-      with:
-        dockerfile: 21/node 
-        image-name: whitesource
-        tags: node 21-node 21.9-node 21.9.1-node
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
- 
-  build_whitesource_with_docker:
-    name: Build whitesource with docker 
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2.4.0
-
-    - name: Build whitesource Docker Images with docker
-      uses: philips-software/docker-ci-scripts@v4.1.0
-      with:
-        dockerfile: 21/docker 
-        image-name: whitesource
-        tags: docker 21-docker 21.9-docker 21.9.1-docker
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
-
-  build_whitesource_with_dotnetcore:
-    name: Build whitesource with dotnetcore
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2.4.0
-
-    - name: Build whitesource Docker Images with dotnetcore
-      uses: philips-software/docker-ci-scripts@v4.1.0
-      with:
-        dockerfile: 21/dotnetcore 
-        image-name: whitesource
-        tags: dotnetcore 21-dotnetcore 21-dotnetcore-3 21.9-dotnetcore 21.9-dotnetcore-3.0 21.9.1-dotnetcore 21.9.1-dotnetcore-3.0.101
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-        DOCKER_ORGANIZATION: philipssoftware
-        GITHUB_ORGANIZATION: philips-software
+      - uses: actions/checkout@v2.4.0
+      - name: ${{ matrix.name }}
+        uses: philips-software/docker-ci-scripts@v4.1.0
+        with:
+          dockerfile: ${{ matrix.dockerfile }}
+          image-name: whitesource
+          tags: ${{ matrix.tags }}
+          push-branches: main
+          slsa-provenance: true
+          sign: true
