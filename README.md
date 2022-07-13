@@ -1,7 +1,8 @@
 [![Build Status](https://github.com/philips-software/docker-whitesource/workflows/build/badge.svg)](https://github.com/philips-software/docker-whitesource/actions/)
-[![Slack](https://philips-software-slackin.now.sh/badge.svg)](https://philips-software-slackin.now.sh)
 
 # Docker images
+
+> ⚠️ We're no longer maintaining this image.
 
 This repo will contain docker images with [Whitesource Agent](https://www.whitesourcesoftware.com/)
 
